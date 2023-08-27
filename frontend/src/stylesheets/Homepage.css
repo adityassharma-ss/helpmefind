@@ -1,0 +1,271 @@
+/* Global Styles */
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f0f0f0;
+}
+
+/* Banner Styles */
+
+.BannerBox {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6b6b, #1e90ff);
+}
+
+.banner {
+    width: 80%;
+    height: 60%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.banner img {
+    max-width: 70%;
+    height: auto;
+    transform: translateY(-20%);
+}
+
+.banner > h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    color: #333;
+}
+
+.banner > h1 > span {
+    color: #fa7611;
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+.banner > h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #555;
+}
+
+/* Item Tags Styles */
+
+.itemTags {
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.tag {
+    width: 150px;
+    height: 100%;
+    background-color: #ff6b6b;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.5rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.tag:hover {
+    transform: scale(1.05);
+    background-color: #ff8c8c;
+}
+
+.tag > h3 {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.tag > p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #f0f0f0;
+}
+
+
+/* List Box Styles */
+
+.ListBox {
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.listContainer {
+    width: 30%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    padding: 1.5rem;
+}
+
+.listContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* HomepageListItems Styles */
+
+.listItem {
+    width: 100%;
+    height: 6rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #ff6b6b, #1e90ff);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.listItem > img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.listTexts {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: 1rem;
+}
+
+.listTexts > div {
+    display: flex;
+    align-items: center;
+}
+
+.listTexts > div :first-child {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: #f47a51;
+}
+
+/* Footer Styles */
+
+footer {
+    height: 10vh;
+    background: linear-gradient(135deg, #1e90ff, #4caf50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > h3 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1150px) {
+    .banner > h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner > h3 {
+        font-size: 1.2rem;
+    }
+
+    .banner img {
+        max-width: 60%;
+    }
+
+    .tag {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner {
+        padding: 2rem;
+    }
+
+    .tag {
+        width: 100px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .banner {
+        padding: 1rem;
+    }
+
+    .banner > h1 {
+        font-size: 2rem;
+    }
+
+    .banner > h3 {
+        font-size: 1rem;
+    }
+
+    .tag {
+        width: 80px;
+        height: 25px;
+    }
+
+    .ListBox {
+        flex-direction: column;
+    }
+
+    .listContainer {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .listItem {
+        height: 5rem;
+    }
+
+    .listTexts > div :first-child {
+        margin-right: 0.5rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        height: 8vh;
+    }
+
+    footer > h3 {
+        font-size: 0.8rem;
+    }
+}
