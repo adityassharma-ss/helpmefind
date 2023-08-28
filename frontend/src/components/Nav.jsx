@@ -41,12 +41,13 @@ const Nav = () => {
   };
 
   return (<>
-    <AppBar position="static" sx={{
-      background: '#fff',
+    <AppBar position="sticky" sx={{
+      background: 'linear-gradient(to right, #BFB2C4, #a43fa8)',
       padding: '0.5em 2em',
+      top: 0,
     }}>
       <Toolbar>
-        <IconButton sx={{ background: '#FE926E' }} component={Link} to={'/'}
+        <IconButton sx={{ background: '#BFB2C4' }} component={Link} to={'/'}
                     onClick={() => setPageNumber(0)}>
           <img src={CollegeIcon} alt="" />
         </IconButton>
