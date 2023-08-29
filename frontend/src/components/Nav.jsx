@@ -47,10 +47,6 @@ const Nav = () => {
       top: 0,
     }}>
       <Toolbar>
-        <IconButton sx={{ background: '#BFB2C4' }} component={Link} to={'/'}
-                    onClick={() => setPageNumber(0)}>
-          <img src={CollegeIcon} alt="" />
-        </IconButton>
         {!isSmall ? <>
           <Tabs value={pageNumber} onChange={(e, val) => setPageNumber(val)}
                 indicatorColor={'primary'}>
