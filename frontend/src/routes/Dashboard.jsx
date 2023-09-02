@@ -166,21 +166,21 @@ const Dashboard = () => {
                          value={postData.batch}
                          onChange={(e) => {
                            if (!e.target.value.match(/^[0-9]{4}$/)) {
-                             setErrors({
-                               ...errors,
-                               batch: true
-                             });
-                           } else {
-                             setErrors({
-                               ...errors,
-                               batch: false
-                             });
-                           }
-                           setPostData({
-                             ...postData,
-                             batch: e.target.value
-                           });
-                         }} required={true} label='Batch' variant='outlined' />
+                            setErrors({
+                              ...errors,
+                              batch: true
+                            });
+                          } else {
+                            setErrors({
+                              ...errors,
+                              batch: false
+                            });
+                          }
+                          setPostData({
+                            ...postData,
+                            batch: e.target.value
+                          });
+                        }} required={true} label='Batch' variant='outlined' />
             </div>
 
             <div className={'row'}>
